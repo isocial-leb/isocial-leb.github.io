@@ -1,0 +1,9 @@
+@media(min-width:1200px){
+	.navbar-collapse {
+		width: 50vw !important;
+	}
+	.navbar-collapse{
+	height: calc(100vh - 38px);
+	top: 38px;
+}
+}

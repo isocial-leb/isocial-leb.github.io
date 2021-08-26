@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+@media (min-width: 576px){ /*576px and above*/
+	.col-sm-4 {
+		flex: 0 0 auto;
+		width: 37.333333%;
+	}
+}
+@media (max-width: 1010px){
+	.header,
+	.nav-lg-container {
+		display: none !important;
+	}
+	.navbar-collapse {
+		top: auto !important;
+		height: 89vh !important;
+	}
+}
+
+.header {
+	height: 38px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.header div {
+	display: flex;
+	align-items: center;
+}
+.header h4 {
+	cursor: pointer;
+}
+.header h5 {
+	margin: auto;
+}
+.header h4, h5{
+	font-family: Raleway,sans-serif !important;
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+	transition: 0.3s;
+}
+.glyphicon {
+	height: 20px;
+	filter: brightness(0) invert(1);
+	padding: 0 7px;
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: 0.3s;
+}
+.i-mail:hover h4 {
+	color: #d6d2d2;
+}
+.i-mail:hover img{
+	filter: brightness(0) invert(0.8);
+}
+.i-phone:hover h4 {
+	color: #d6d2d2;
+}
+.i-phone:hover img{
+	filter: brightness(0) invert(0.8);
+}
+.social-media:hover {
+	filter: brightness(0) invert(0.8);
+}
+.ic-home{
+	background-image: url(../img/ic-home.png);
+}
+.ic{
+	background-size: cover;
+	height: 20px;
+	width: 20px;
+	margin-right: 9px;
+}
+/*navbar*/
+.mySlides-title {
+	font-family: Roboto,sans-serif;
+	color: white;
+	width: fit-content;
+	margin: 0;
+	position: absolute;
+	left: 20vw;
+	top: calc(12vh + 6%);
+}
+.mySlides-arrow {
+	position: absolute;
+	height: 15vh;
+	top: 6vh;
+}
+.mySlides-title::after {
+	content: '';
+	background: white;
+	width: 100%;
+	height: 10px;
+	display: flex;
+	margin-top: 20px;
+
+}
+.header-div {
+	position: relative;
+	background: linear-gradient( 
+		348deg
+		, #e73c7e, #00d3fb);
+	background-size: 400% 400%;
+	animation: gradient 50s ease infinite;
+	width: 100vw;
+	height: 75vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.nav-lg-container {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+}
+.navbar-lg {
+	justify-content: normal;
+}
+.navbar-nav-lg li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.navbar-nav-lg li a{
+	padding: 0 24px;
+	color: #333;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 1px;
+	box-sizing: border-box;
+	top: calc((11vh - 14px) / 2);
+	position: inherit;
+	text-decoration: none;
+}
+.navbar-nav-lg li:after {
+	content: '';
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	width: 18px;
+	height: 3px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	opacity: 0;
+	-webkit-transition: opacity .2s ease,width .35s cubic-bezier(.38,1,.57,1.1);
+	-moz-transition: opacity .2s ease,width .35s cubic-bezier(.38,1,.57,1.1);
+	transition: opacity .2s ease,width .35s cubic-bezier(.38,1,.57,1.1);
+}
+.navbar-nav-lg li:hover:after{
+	opacity: 1;
+	width: 100%;
+}
+.navbar {
+	z-index: 2;
+	height: 11vh;
+	padding: 0 2vw;
+	min-height: 78px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}	
+.navbar .container{
+	max-width: 100vw;
+	min-height: 78px;
+	padding: 2%;
+}
+.navbar *{
+	height: inherit;
+}	
+.navbar-header{
+	padding: 12px 0;
+	min-height: 78px;
+}
+.navbar-brand,
+.navbar-brand img{
+	min-height: fit-content
+}
+.navbar-collapse{
+	box-shadow: 3px 6px 20px 0px;
+	background: white;
+	display: none;
+	position: absolute;
+	height: 89vh;
+	width: 25vw !important;
+	top: initial;
+	right: 0;
+	z-index: 1;
+}
+.navbar-nav{
+	margin: auto;
+	width: fit-content;
+	width: 75%;
+	padding-top: 20vh;
+}
+.navbar-nav li{
+	margin: 12px 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+.navbar-nav a{
+	color: #969696;
+	text-decoration: none;
+}
+.vector1 {
+	height: 53vh;
+	top: 22vh;
+	position: relative;
+}
+
+/*hamburger*/
+
+.menu-btn{
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	right: 4vw;
+}
+.btn-brg{
+	width: 30px;
+	height: 4px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(128,128,128,.2);
+	transition: all .5s ease-in-out
+}
+.btn-brg::before,
+.btn-brg::after {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 4px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(128,128,128,.2);
+	transition: all .5s ease-in-out;
+}
+.btn-brg,
+.btn-brg::before,
+.btn-brg::after{
+	background: white;
+}
+.btn-brg::before {
+	transform: translateY(-8px);
+}
+.btn-brg::after {
+	transform: translateY(8px);
+}
+
+/* ANIMATION */
+
+.menu-btn.open .btn-brg {
+	transform: translateX(50px);
+	background: transparent;
+	box-shadow: none;
+}
+.menu-btn.open .btn-brg::before {
+	background: black !important;
+	transform: rotate(45deg) translate(-35px, 35px);
+}
+.menu-btn.open .btn-brg::after {
+
+	background: black !important;
+	transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+/*slideshow*/
+
+.w3-display-container{
+	top: 0;
+	height: inherit !important;
+	position: absolute !important;
+	width: 100%;
+}
+.mySlides{
+	width: 100vw;
+	height: 100vh;
+	max-height: inherit;
+}
+.w3-content {
+	max-width: 100% !important;
+	max-height: 100% !important;
+	height: inherit;
+}
+/*.mySlides:nth-child(1){
+	background-color: red;
+}
+.mySlides:nth-child(2){
+	background-color: green;
+}
+.mySlides:nth-child(3){
+	background-color: blue;
+	}*/
+	.w3-border {
+		border: 1px solid #ccc!important;
+		height: 18px;
+	}
+	.col-sm-05 {
+		flex: 0 0 auto;
+		width: 4.333333%;
+	}
+	.card-container {
+		top: 45vh;
+		position: absolute;
+		margin: 0 auto;
+		width: 100vw;
+		max-width: none;
+		padding: 0 4vw;
+	}
+	.card {
+		background: rgb(240 240 240);
+		height: 50vh;
+		border-radius: 45px;
+		padding: 2%;
+		max-width: none;
+	}
+	svg {
+		position: absolute;
+		bottom: 0;
+		width: 100vw;
+		height: 5vw;
+		/* set height to pixels if you want angle to change with screen width */
+	}
+
+	/*About Us*/
+
+	.about-us {
+		position: relative;
+		display: flex;
+		height: 38vh;
+		background-color: #ececec;
+	}

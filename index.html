@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html id='html'>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<link rel="icon" href="img/isocial-icon.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css"> 
+	<link rel="stylesheet" href="css/glyphicon.css"> 
+	<link rel="stylesheet" href="css/styles_sm.css"> 
+	<link rel="stylesheet" href="css/styles_md.css">
+	<link rel="stylesheet" href="css/styles_lg.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" href="css/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+
+	<title>isocial | Social Media Marketing Agency</title>
+
+</head>
+
+<body>
+	
+	<div class="header-div">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+			<polygon fill="#ececec" points="0,100 100,0 100,100"/>
+		</svg>
+		<div class="row header animate__animated animate__slideInDown">
+
+			<div class="col-lg-2">
+				<div class="i-phone">
+					<img class="glyphicon" src="img/cell.png" style="padding-left: 25px;">
+					<h4>+961 71 292 538</h4>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="i-mail">
+					<img class="glyphicon" src="img/mail.png">
+					<h4>isocial.lebanon@gmail.com</h4>
+				</div>
+				<a href="https://www.instagram.com/isocial.lb/">
+					<img class="glyphicon social-media" src="img/insta.png" style="padding-left: 25px;">
+				</a>
+				<a href="">
+					<img class="glyphicon social-media" src="img/fb.png">
+				</a>
+				<a href="">
+					<img class="glyphicon social-media" src="img/linkdin.png">
+				</a>
+			</div>
+			<div class="col-lg-3"><h5>Welcome to isocial</h5></div>
+
+		</div>
+
+		<nav class="navbar navbar-lg navbar-default  animate__animated animate__slideInDown">
+
+			<!-- middle logo -->
+
+			<div class="navbar-header animate__animated animate__backInLeft">
+				<a href="index.html" class="navbar-brand">
+					<img class="navbar-img" src="img/isocial-horizontal-white.png">
+				</a>
+			</div>
+			<div class="nav-lg-container">
+				<ul class="nav navbar-nav-lg">
+					<li><a href="">Home</a></li>
+					<li><a href="">About us</a></li>
+					<li><a href="">Our clients</a></li>
+					<li><a href="">Contact us</a></li>
+				</ul>
+			</div>
+
+			<!-- hamburger -->
+
+			<div class="menu-btn" id="burger-btn">
+				<div class="btn-brg"></div>
+			</div>
+
+		</nav>
+		<div class="w3-content w3-display-container" style="max-width:800px">
+
+			<div class="mySlides w3-animate-right" style="width:100%">
+				<h1 class="mySlides-title">We help your <br> business to grow</h1>
+				<img src="img/h1-slide-arrow1.png" class="mySlides-arrow">
+				<img src="img/vector-1.png" class="vector1 animate__animated animate__slideInUp">
+			</div>
+			<div class="mySlides w3-animate-right" style="width:100%">
+				<h1>test</h1>
+			</div>
+			<div class="mySlides w3-animate-right" style="width:100%">
+				<h1>test</h1>
+			</div>
+			<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%; display: none;">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+			</div>
+		</div>
+		<div class="navbar-collapse top-navbar" id="collapse-navbar">
+			<ul class="nav navbar-nav">
+				<li><a href="">Home</a></li>
+				<li><a href="">About us</a></li>
+				<li><a href="">Our clients</a></li>
+				<li><a href="">Contact us</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- list -->
+
+	<section class="about-us" id="about-us">
+
+	</section>
+
+</div>
+
+<div class="col-lg-12"></div >
+
+<script type="text/javascript">
+	$(document).ready(myfunction);
+	$(window).on('resize',myfunction);
+	function myfunction() {
+		var position = $('.mySlides-title').position();
+		y = position.left;
+		$('.mySlides-arrow').attr("style", "left :calc(" + y +"px + 255px)");
+	}
+</script>
+<script>
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+			dots[i].className = dots[i].className.replace(" w3-white", "");
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block"; 
+		dots[myIndex-1].className += " w3-white";
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+		showDivs(slideIndex += n);
+	}
+
+	function currentDiv(n) {
+		showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		if (n > x.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" w3-white", "");
+				}
+				x[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " w3-white";
+			}
+		</script>
+
+		<script type="text/javascript">
+			const menuBtn = document.querySelector('.menu-btn');
+			let menuOpen = false;
+			menuBtn.addEventListener('click', () => {
+				if(!menuOpen) {
+					menuBtn.classList.add('open');
+					menuOpen = true;
+				} else {
+					menuBtn.classList.remove('open');
+					menuOpen = false;
+				}
+			});
+		</script>
+		<script type="text/javascript">
+			const menuBtn = document.querySelector('.menu-btn');
+			let menuOpen = false;
+			menuBtn.addEventListener('click', () => {
+				if(!menuOpen) {
+					menuBtn.classList.add('open');
+					menuOpen = true;
+				} else {
+					menuBtn.classList.remove('open');
+					menuOpen = false;
+				}
+			});
+		</script>
+		<script>
+			var y = document.getElementById("burger-btn");
+			$( y ).click(function () {
+				if ( $( '.navbar-collapse' ).first().is( ":hidden" ) ) {
+					$( '.navbar-collapse' ).toggle( "slide" );
+				} else {
+					$( '.navbar-collapse' ).toggle( "slide" );
+				}
+			});
+		</script>
+	<!-- <script type="text/javascript">
+		var x = document.getElementById("collapse-navbar");
+		var y = document.getElementById("burger-btn");
+		y.onclick = function() {
+			x.classList.toggle("show-burger");
+		};
+	</script> -->
+</body>
+</html>
