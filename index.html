@@ -30,205 +30,137 @@
 </head>
 
 <body>
+
+	<!-- Main Navbar -->
+
+	<nav class="navbar navbar-lg navbar-default">
+
+		<div class="navbar-header animate__animated animate__backInLeft">
+			<a href="index.html" class="navbar-brand">
+				<!-- <img class="navbar-img logo-only animate__animated animate__bounceOutLeft" src="img/logo-only.png"> -->
+				<img class="navbar-img logo-text" src="img/isocial-text.png">
+			</a>
+		</div>
+
+		<!-- Hamburger -->
+
+		<div class="menu-btn animate__animated animate__slideInDown" id="burger-btn">
+			<div class="btn-brg"></div>
+		</div>
+		
+	</nav>
 	
-	<div class="header-div">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<polygon fill="#ececec" points="0,100 100,0 100,100"/>
-		</svg>
-		<div class="row header animate__animated animate__slideInDown">
+	<!-- Full screen menu -->
 
-			<div class="col-lg-2">
-				<div class="i-phone">
-					<img class="glyphicon" src="img/cell.png" style="padding-left: 25px;">
-					<h4>+961 71 292 538</h4>
+	<div class="container full-screen-navbar animate__animated animate__fadeOut">
+		<div class="container-menu NormalDiv row">
+			<div class="container-logo center-pics col-lg-12">
+				<img class="navbar-img logo-text" src="img/logo-only.png">
+			</div>
+			<div class="menuDiv">
+				<div class="border-right">
+					<h1>About Us</h1>
+				</div>
+				<div class="border-right">
+					<h1>Our clients</h1>
+				</div>
+				<div>
+					<h1>Contact Us</h1>
 				</div>
 			</div>
-			<div class="col-lg-7">
-				<div class="i-mail">
-					<img class="glyphicon" src="img/mail.png">
-					<h4>isocial.lebanon@gmail.com</h4>
-				</div>
+			<div class="social-media-container social-media-container-menu">
 				<a href="https://www.instagram.com/isocial.lb/">
-					<img class="glyphicon social-media" src="img/insta.png" style="padding-left: 25px;">
+					<img class="glyphicon social-media" onmouseover="this.src='img/insta-gradient.png'" onmouseout="this.src='img/insta.png'" src="img/insta.png">
 				</a>
 				<a href="">
-					<img class="glyphicon social-media" src="img/fb.png">
+					<img class="glyphicon social-media" onmouseover="this.src='img/fb-gradient.png'" onmouseout="this.src='img/fb.png'" src="img/fb.png">
 				</a>
 				<a href="">
-					<img class="glyphicon social-media" src="img/linkdin.png">
+					<img class="glyphicon social-media" onmouseover="this.src='img/linkdin-gradient.png'" onmouseout="this.src='img/linkdin.png'" src="img/linkdin.png">
 				</a>
 			</div>
-			<div class="col-lg-3"><h5>Welcome to isocial</h5></div>
-
 		</div>
-
-		<nav class="navbar navbar-lg navbar-default  animate__animated animate__slideInDown">
-
-			<!-- middle logo -->
-
-			<div class="navbar-header animate__animated animate__backInLeft">
-				<a href="index.html" class="navbar-brand">
-					<img class="navbar-img" src="img/isocial-horizontal-white.png">
-				</a>
-			</div>
-			<div class="nav-lg-container">
-				<ul class="nav navbar-nav-lg">
-					<li><a href="">Home</a></li>
-					<li><a href="">About us</a></li>
-					<li><a href="">Our clients</a></li>
-					<li><a href="">Contact us</a></li>
-				</ul>
-			</div>
-
-			<!-- hamburger -->
-
-			<div class="menu-btn" id="burger-btn">
-				<div class="btn-brg"></div>
-			</div>
-
-		</nav>
-		<div class="w3-content w3-display-container" style="max-width:800px">
-
-			<div class="mySlides w3-animate-right" style="width:100%">
-				<h1 class="mySlides-title">We help your <br> business to grow</h1>
-				<img src="img/h1-slide-arrow1.png" class="mySlides-arrow">
-				<img src="img/vector-1.png" class="vector1 animate__animated animate__slideInUp">
-			</div>
-			<div class="mySlides w3-animate-right" style="width:100%">
-				<h1>test</h1>
-			</div>
-			<div class="mySlides w3-animate-right" style="width:100%">
-				<h1>test</h1>
-			</div>
-			<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%; display: none;">
-				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-			</div>
-		</div>
-		<div class="navbar-collapse top-navbar" id="collapse-navbar">
-			<ul class="nav navbar-nav">
-				<li><a href="">Home</a></li>
-				<li><a href="">About us</a></li>
-				<li><a href="">Our clients</a></li>
-				<li><a href="">Contact us</a></li>
-			</ul>
-		</div>
-
 	</div>
 
-	<!-- list -->
+	<!-- Center logo -->
 
-	<section class="about-us" id="about-us">
-
+	<section class="home" id="home">
+		<div class="NormalDiv row">
+			<div class="center-pics col-lg-12">
+				<img src="img/isocial-1.png" class="blinkable">
+				<img src="img/isocial-2.png" class="blinkable">
+				<img src="img/isocial-3.png" class="blinkable">
+				<img src="img/isocial-4.png" class="blinkable">
+				<img src="img/isocial-5.png" class="blinkable">
+				<img src="img/isocial-6.png" class="blinkable">
+			</div>
+			<div class="slogan col-lg-12">
+				<h1>see <span>life</span> from a different perspective</h1>
+				<h2>We are symbol of <span>Quality, Reliability and Success.</span>
+					With our expertise and skills in social media,
+				we’re confident that we’ll be able to deliver the best digital marketing for you !</h2>
+			</div>
+			<div class="social-media-container">
+				<a href="https://www.instagram.com/isocial.lb/">
+					<img class="glyphicon social-media" onmouseover="this.src='img/insta-gradient.png'" onmouseout="this.src='img/insta.png'" src="img/insta.png">
+				</a>
+				<a href="">
+					<img class="glyphicon social-media" onmouseover="this.src='img/fb-gradient.png'" onmouseout="this.src='img/fb.png'" src="img/fb.png">
+				</a>
+				<a href="">
+					<img class="glyphicon social-media" onmouseover="this.src='img/linkdin-gradient.png'" onmouseout="this.src='img/linkdin.png'" src="img/linkdin.png">
+				</a>
+			</div>
+		</div>
 	</section>
 
-</div>
+	<!-- Script -->
 
-<div class="col-lg-12"></div >
+	<script type="text/javascript">
+		const menuBtn = document.querySelector('.menu-btn');
+		let menuOpen = false;
+		menuBtn.addEventListener('click', () => {
+			if(!menuOpen) {
+				menuBtn.classList.add('open');
+				menuOpen = true;
+			} else {
+				menuBtn.classList.remove('open');
+				menuOpen = false;
+			}
+		});
+	</script>
+	<script>
+		var colors = ['#e73c7e', '#00d3fb'];
+		$(".nav-a").hover(function(){
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			$(this).css("color", random_color);
+		}, function(){
+			$(this).css("color", "#333");
+		});
+	</script>
+	<script>
+		var slideIndex = 0;
+		showSlides();
 
-<script type="text/javascript">
-	$(document).ready(myfunction);
-	$(window).on('resize',myfunction);
-	function myfunction() {
-		var position = $('.mySlides-title').position();
-		y = position.left;
-		$('.mySlides-arrow').attr("style", "left :calc(" + y +"px + 255px)");
-	}
-</script>
-<script>
-	var myIndex = 0;
-	carousel();
-
-	function carousel() {
-		var i;
-		var x = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("demo");
-		for (i = 0; i < x.length; i++) {
-			x[i].style.display = "none";  
-			dots[i].className = dots[i].className.replace(" w3-white", "");
-		}
-		myIndex++;
-		if (myIndex > x.length) {myIndex = 1}    
-			x[myIndex-1].style.display = "block"; 
-		dots[myIndex-1].className += " w3-white";
-  setTimeout(carousel, 5000); // Change image every 2 seconds
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("blinkable");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+				slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 500); // Change image every 0.5 seconds
 }
 </script>
-
 <script>
-	var slideIndex = 1;
-	showDivs(slideIndex);
+	var y = document.getElementById("burger-btn");
+	$( y ).click(function () {
+		$('.full-screen-navbar').toggleClass("animate__animated animate__fadeIn animate__animated animate__fadeOut");
+		$('.full-screen-navbar').toggleClass("dis-block");
+	});
+</script>
 
-	function plusDivs(n) {
-		showDivs(slideIndex += n);
-	}
-
-	function currentDiv(n) {
-		showDivs(slideIndex = n);
-	}
-
-	function showDivs(n) {
-		var i;
-		var x = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("demo");
-		if (n > x.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = x.length}
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";  
-				}
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(" w3-white", "");
-				}
-				x[slideIndex-1].style.display = "block";  
-				dots[slideIndex-1].className += " w3-white";
-			}
-		</script>
-
-		<script type="text/javascript">
-			const menuBtn = document.querySelector('.menu-btn');
-			let menuOpen = false;
-			menuBtn.addEventListener('click', () => {
-				if(!menuOpen) {
-					menuBtn.classList.add('open');
-					menuOpen = true;
-				} else {
-					menuBtn.classList.remove('open');
-					menuOpen = false;
-				}
-			});
-		</script>
-		<script type="text/javascript">
-			const menuBtn = document.querySelector('.menu-btn');
-			let menuOpen = false;
-			menuBtn.addEventListener('click', () => {
-				if(!menuOpen) {
-					menuBtn.classList.add('open');
-					menuOpen = true;
-				} else {
-					menuBtn.classList.remove('open');
-					menuOpen = false;
-				}
-			});
-		</script>
-		<script>
-			var y = document.getElementById("burger-btn");
-			$( y ).click(function () {
-				if ( $( '.navbar-collapse' ).first().is( ":hidden" ) ) {
-					$( '.navbar-collapse' ).toggle( "slide" );
-				} else {
-					$( '.navbar-collapse' ).toggle( "slide" );
-				}
-			});
-		</script>
-	<!-- <script type="text/javascript">
-		var x = document.getElementById("collapse-navbar");
-		var y = document.getElementById("burger-btn");
-		y.onclick = function() {
-			x.classList.toggle("show-burger");
-		};
-	</script> -->
 </body>
 </html>

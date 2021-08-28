@@ -1,9 +1,36 @@
+@media(min-width:1020px){
+	.menuDiv {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		margin: auto;
+		max-width: fit-content;
+		cursor: pointer;
+	}
+	.border-right {
+		border-right: 1px solid #215e78;
+	}
+	.menuDiv h1 {
+		padding: 0 24px;
+		color: #333;
+		font-size: 2.4em;
+		font-weight: 800;
+		letter-spacing: 1px;
+		position: inherit;
+		text-decoration: none;
+		transition: 0.2s;
+		text-align: left;
+	}
+}
+
+
 @media(min-width:1200px){
 	.navbar-collapse {
 		width: 50vw !important;
 	}
 	.navbar-collapse{
-	height: calc(100vh - 38px);
-	top: 38px;
-}
+		height: calc(100vh - 38px);
+		top: 38px;
+	}
 }

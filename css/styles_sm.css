@@ -1,0 +1,10 @@
+@media(max-width:1020px){
+	.slogan {
+		max-width: 500px;
+		padding: 0;
+		margin: auto;
+	}
+	.center-pics {
+		max-width: 350px;
+	}
+}
