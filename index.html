@@ -33,7 +33,7 @@
 
 	<!-- Main Navbar -->
 
-	<nav class="navbar navbar-lg navbar-default">
+	<nav class="navbar navbar-lg navbar-default navbar-fixed-top">
 
 		<div class="navbar-header animate__animated animate__backInLeft">
 			<a href="index.html" class="navbar-brand">
@@ -117,8 +117,22 @@
 		<div class="NormalDiv2 row">
 			<div class="col-xm-12 col-sm-7 whos-the-guy">
 				<div class="stretch"><h1 class="stretch-it">HELLO THERE</h1></div>
-				<h3>MY NAME IS Anthony Kobtawi</h3>
+				<div class="row row-kobts">
+					<div class="col-lg-5">
+						<h3>i'm Anthony Kobtawi</h3>
+					</div>
+					<div class="col-lg-2">
+						<img src="img/aka.png">
+					</div>
+					<div class="col-lg-5">
+						<img src="img/kobts-signiature.png">
+					</div>
+				</div>
+				
 				<p>Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. Reprehenderit pariatur andouille, pork chop t-bone brisket incididunt buffalo velit burgdoggen. Dolor ullamco sint anim fugiat, sausage aliquip. Commodo pork chop kevin et, ut laborum nostrud rump turducken cupidatat leberkas velit shoulder.</p>
+
+				<p>Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. Reprehenderit pariatur andouille, pork chop t-bone brisket incididunt buffalo velit burgdoggen. Dolor ullamco sint anim fugiat, sausage aliquip. Commodo pork chop kevin et, ut laborum nostrud rump turducken cupidatat leberkas velit shoulder.</p>
+
 			</div>
 			<div class="col-xm-12 col-sm-5">
 				<div style="margin: 10%;">
@@ -129,16 +143,40 @@
 	</section>
 
 	<!-- Script -->
+
+	<script type="text/javascript">
+		$(function () {
+			$(document).scroll(function () {
+				var $nav = $(".navbar-fixed-top");
+				$nav.toggleClass('scrolled animate__animated animate__flipInX', $(this).scrollTop() > $nav.height());
+			});
+		});
+	</script>
 	<script type="text/javascript">	
-		var elmt              = $(".stretch");
-		var cont_width        = elmt.width();
-		var span_width        = $(".stretch-it").width();
-		var nb_char           = elmt.text().length;
-		var char_width        = span_width / nb_char;
-		$(document).ready(function(){
+		$(document).ready(myfunction);
+		function myfunction() {
+			var elmt              = $(".stretch");
+			var cont_width        = elmt.width();
+			var span_width        = $(".stretch-it").width();
+			var nb_char           = elmt.text().length;
+			var char_width        = span_width / nb_char;
 			var white_space = (cont_width - (nb_char + 1) *char_width) / (nb_char);
 			$(".stretch-it").css("letter-spacing", white_space);
-		})
+			$(".row-kobts").css("margin-right", white_space);
+		};
+	</script>
+	<script type="text/javascript">	
+		$(window).on('resize',myfunction);
+		function myfunction() {
+			var elmt              = $(".stretch");
+			var cont_width        = elmt.width();
+			var span_width        = $(".stretch-it").width();
+			var nb_char           = elmt.text().length;
+			var char_width        = span_width / nb_char;
+			var white_space = (cont_width - (nb_char + 1) *char_width) / (nb_char);
+			$(".stretch-it").css("letter-spacing", white_space);
+			$(".row-kobts").css("margin-right", white_space);
+		};
 	</script>
 	<script type="text/javascript">
 		const menuBtn = document.querySelector('.menu-btn');
@@ -151,15 +189,6 @@
 				menuBtn.classList.remove('open');
 				menuOpen = false;
 			}
-		});
-	</script>
-	<script>
-		var colors = ['#e73c7e', '#00d3fb'];
-		$(".nav-a").hover(function(){
-			var random_color = colors[Math.floor(Math.random() * colors.length)];
-			$(this).css("color", random_color);
-		}, function(){
-			$(this).css("color", "#333");
 		});
 	</script>
 	<script>
