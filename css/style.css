@@ -219,6 +219,7 @@
 	z-index: 2;
 	background: linear-gradient(   348deg  , #e73c7ec4, #00d3fb87);
 	backdrop-filter: blur(5px);
+	 -webkit-backdrop-filter: blur(5px)
 }
 .full-screen-navbar .row {
 	height: 100vh;
