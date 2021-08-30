@@ -109,8 +109,9 @@
 .navbar-brand img{
 	min-height: fit-content;
 	position: relative;
-	max-height: 75%;
 	top: 2px;
+	height: auto;
+	max-width: 200px;
 }
 .navbar-collapse{
 	background: #64a7d447;
