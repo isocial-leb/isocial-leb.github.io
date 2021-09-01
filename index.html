@@ -116,7 +116,7 @@
 	<section class="about marg-50" id="about">
 		<div class="NormalDiv2 row">
 			<div class="col-xm-12 col-sm-7 whos-the-guy">
-				<div class="stretch"><h1 class="stretch-it">HELLO THERE</h1></div>
+				<div class="stretch" id="box"><h1 id="text" class="stretch-it">HELLO THERE</h1></div>
 				<div class="row row-kobts">
 					<div class="col-lg-5">
 						<h3>i'm Anthony Kobtawi</h3>
@@ -152,31 +152,56 @@
 			});
 		});
 	</script>
-	<script type="text/javascript">	
+	<!-- <script type="text/javascript">	
 		$(document).ready(myfunction);
-		function myfunction() {
-			var elmt              = $(".stretch");
-			var cont_width        = elmt.width();
-			var span_width        = $(".stretch-it").width();
-			var nb_char           = elmt.text().length;
-			var char_width        = span_width / nb_char;
-			var white_space = (cont_width - (nb_char + 1) *char_width) / (nb_char);
-			$(".stretch-it").css("letter-spacing", white_space);
-			$(".row-kobts").css("margin-right", white_space);
-		};
-	</script>
-	<script type="text/javascript">	
 		$(window).on('resize',myfunction);
 		function myfunction() {
 			var elmt              = $(".stretch");
 			var cont_width        = elmt.width();
 			var span_width        = $(".stretch-it").width();
 			var nb_char           = elmt.text().length;
-			var char_width        = span_width / nb_char;
-			var white_space = (cont_width - (nb_char + 1) *char_width) / (nb_char);
+			var char_width        = cont_width / nb_char;
+			var white_space = (cont_width - (nb_char + 1) * char_width) / (nb_char);
+			alert("cont_width : " + cont_width + " - " + "span_width : " + span_width + " - " + "nb_char : " + nb_char + " - " + "char_width : " + char_width + " - " + "white_space : " + white_space)
 			$(".stretch-it").css("letter-spacing", white_space);
 			$(".row-kobts").css("margin-right", white_space);
 		};
+	</script> -->
+	<script type="text/javascript">
+		// !!!! This code is experimental...don't blame me if your performance tanks.
+
+		const box = document.getElementById("box");
+		const text = document.getElementById("text");
+
+		function resizeBox() {
+			calcTextWidth();
+			calcTextSize();
+		}
+		resizeBox();
+
+		new ResizeObserver(resizeBox).observe(box);
+
+		function calcTextWidth() {
+			const parentContainerWidth = text.parentNode.clientWidth;
+
+			const currentTextWidth = text.scrollWidth;
+			const currentFontStretch = parseInt(window.getComputedStyle(text).fontStretch);
+
+
+			console.log('parent: ' + parentContainerWidth + ' textwidth: ' + currentTextWidth + ' stretch: ' +currentFontStretch);
+			const newValue = Math.min(Math.max(300, (parentContainerWidth / currentTextWidth) * currentFontStretch), 500)
+
+			text.style.setProperty('--fontStretch', newValue + '%');
+		}
+
+		function calcTextSize() {
+			const parentContainerWidth = text.parentNode.clientWidth;
+			const currentTextWidth = text.scrollWidth;
+			const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
+			const newValue = Math.min(Math.max(16, (parentContainerWidth / currentTextWidth) * currentFontSize), 500) - 10;
+
+			text.style.setProperty('--fontSize', newValue +'px');
+		}
 	</script>
 	<script type="text/javascript">
 		const menuBtn = document.querySelector('.menu-btn');
