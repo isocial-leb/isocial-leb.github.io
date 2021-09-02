@@ -43,12 +43,12 @@
 
 		<!-- Hamburger -->
 
-		<div class="menu-btn animate__animated animate__slideInDown" id="burger-btn">
+		<div class="menu-btn animate__animated animate__slideInDown" id="burger-btn" onclick="stopScrolling()">
 			<div class="btn-brg"></div>
 		</div>
 		
 	</nav>
-	
+	<div class="for-scrolling"></div>
 	<!-- Full screen menu -->
 
 	<div class="container full-screen-navbar animate__animated animate__fadeOut">
@@ -115,8 +115,8 @@
 
 	<section class="about marg-50" id="about">
 		<div class="NormalDiv2 row">
-			<div class="col-xm-12 col-sm-7 whos-the-guy">
-				<div class="stretch" id="box"><h1 id="text" class="stretch-it">HELLO THERE</h1></div>
+			<div class="col-xs-12 col-lg-7 whos-the-guy">
+				<div class="stretch" id="box"><h1 id="text" class="stretch-it">hey there !</h1></div>
 				<div class="row row-kobts">
 					<div class="col-lg-5">
 						<h3>i'm Anthony Kobtawi</h3>
@@ -134,7 +134,7 @@
 				<p>Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. Reprehenderit pariatur andouille, pork chop t-bone brisket incididunt buffalo velit burgdoggen. Dolor ullamco sint anim fugiat, sausage aliquip. Commodo pork chop kevin et, ut laborum nostrud rump turducken cupidatat leberkas velit shoulder.</p>
 
 			</div>
-			<div class="col-xm-12 col-sm-5">
+			<div class="col-xm-12 col-sm-5 hidden-xs">
 				<div style="margin: 10%;">
 					<img src="img/kobts.png">
 				</div>
@@ -143,30 +143,26 @@
 	</section>
 
 	<!-- Script -->
+	<script>
+		function stopScrolling() {
+			var x = document.getElementById('html');
+			if (x.style.overflow === 'hidden') {
+				x.style.overflow = 'visible';
+			} else {
+				x.style.overflow = 'hidden';
+			}
+		}
+	</script>
 
 	<script type="text/javascript">
 		$(function () {
 			$(document).scroll(function () {
-				var $nav = $(".navbar-fixed-top");
-				$nav.toggleClass('scrolled animate__animated animate__flipInX', $(this).scrollTop() > $nav.height());
+				var $nav = $(".for-scrolling");
+				$nav.toggleClass('scrolled animate__animated animate__backInDown', $(this).scrollTop() > $nav.height());
 			});
 		});
 	</script>
-	<!-- <script type="text/javascript">	
-		$(document).ready(myfunction);
-		$(window).on('resize',myfunction);
-		function myfunction() {
-			var elmt              = $(".stretch");
-			var cont_width        = elmt.width();
-			var span_width        = $(".stretch-it").width();
-			var nb_char           = elmt.text().length;
-			var char_width        = cont_width / nb_char;
-			var white_space = (cont_width - (nb_char + 1) * char_width) / (nb_char);
-			alert("cont_width : " + cont_width + " - " + "span_width : " + span_width + " - " + "nb_char : " + nb_char + " - " + "char_width : " + char_width + " - " + "white_space : " + white_space)
-			$(".stretch-it").css("letter-spacing", white_space);
-			$(".row-kobts").css("margin-right", white_space);
-		};
-	</script> -->
+	
 	<script type="text/javascript">
 		// !!!! This code is experimental...don't blame me if your performance tanks.
 
@@ -189,7 +185,7 @@
 
 
 			console.log('parent: ' + parentContainerWidth + ' textwidth: ' + currentTextWidth + ' stretch: ' +currentFontStretch);
-			const newValue = Math.min(Math.max(300, (parentContainerWidth / currentTextWidth) * currentFontStretch), 500)
+			const newValue = Math.min(Math.max(300, (parentContainerWidth / currentTextWidth) * currentFontStretch), 500) ;
 
 			text.style.setProperty('--fontStretch', newValue + '%');
 		}
@@ -198,7 +194,7 @@
 			const parentContainerWidth = text.parentNode.clientWidth;
 			const currentTextWidth = text.scrollWidth;
 			const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
-			const newValue = Math.min(Math.max(16, (parentContainerWidth / currentTextWidth) * currentFontSize), 500) ;
+			const newValue = Math.min(Math.max(16, (parentContainerWidth / currentTextWidth) * currentFontSize), 500) - 10 ;
 
 			text.style.setProperty('--fontSize', newValue +'px');
 		}

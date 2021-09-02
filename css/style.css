@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+@font-face {
+	font-family: 'hello';
+	src: url(fonts/Hello.otf);
+	src: url(fonts/Hello.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 @font-face {
 	font-family: 'Gotham';
 	src: url('fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
@@ -484,6 +492,7 @@
 	border-color: #e1e1e1;
 	border-style: solid;
 	border-width: 3px 0 3px 0;
+	text-align: center;
 	margin-bottom: 25px;
 }
 .row-kobts h3 {
@@ -501,13 +510,20 @@
 	letter-spacing: 4px;
 	line-height: 45px;
 }
-.row-kobts .col-lg-2 img {
-	padding: 20%;
+.row-kobts .col-lg-2 img,
+.row-kobts .col-lg-5 img {	
+	margin: 10px auto 10px auto;
+	height: auto;
+	display: flex;
+	position: relative;
 }
-.row-kobts .col-lg-5 img {
-	padding: 10%;
+.row-kobts .col-lg-2 img{
+	width: 50px;
 }
-.navbar-fixed-top.scrolled {
+.row-kobts .col-lg-5 img{
+	width: 254px;
+}
+.for-scrolling.scrolled {
 	backdrop-filter: blur(10px);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-bottom: 2px solid rgb(150 150 150 / 10%);
@@ -537,4 +553,11 @@
 	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 700;
+}
+.for-scrolling {
+	position: fixed;
+	width: 100vw;
+	min-height: 78px;
+	height: 11vh;
+	z-index: 1;
 }
