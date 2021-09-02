@@ -524,6 +524,7 @@
 	width: 254px;
 }
 .for-scrolling.scrolled {
+	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-bottom: 2px solid rgb(150 150 150 / 10%);
@@ -560,4 +561,24 @@
 	min-height: 78px;
 	height: 11vh;
 	z-index: 1;
+}
+.NormalDiv3 {
+	position: relative;
+	min-width: 320px;
+	max-width: 1180px;
+	padding: 20px;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	height: inherit;
+}
+.client-logo-div img {
+	width: 250px;
+	height: auto;
+}
+.slogan h4 {
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: 500;
+	color: #898d96;
 }
