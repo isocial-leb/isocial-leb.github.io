@@ -521,7 +521,7 @@
 	width: 50px;
 }
 .row-kobts .col-lg-5 img{
-	width: 254px;
+	width: 200px;
 }
 .for-scrolling.scrolled {
 	-webkit-backdrop-filter: blur(10px);
@@ -565,12 +565,37 @@
 .NormalDiv3 {
 	position: relative;
 	min-width: 320px;
-	max-width: 1180px;
+	max-width: 80%;
 	padding: 20px;
 	width: 100%;
 	margin: auto;
 	display: flex;
 	height: inherit;
+}
+
+.NormalDiv3 h1:nth-of-type(1){
+	    margin: 0 0 0 110px;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+    display: inline;
+    text-transform: inherit;
+    text-transform: uppercase;
+    font-family: 'gotham';
+    font-size: 25px;
+    letter-spacing: 9px;
+    line-height: 50px;
+}
+.line {
+	    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: #000;
+    top: 50%;
+    transform: translate(0,-50%);
 }
 .client-logo-div img {
 	width: 250px;
@@ -581,4 +606,24 @@
 	line-height: 30px;
 	font-weight: 500;
 	color: #898d96;
+}
+.clients-row img {
+	max-height: 200px;
+	padding: 20px;
+}
+.clients-row div {
+	-webkit-transition: all 5s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	filter: gray;
+	-webkit-filter: grayscale(1);
+}
+.clients-row div:hover {
+	-webkit-filter: initial;
+	filter: grayscale(0);
+	filter: initial;
+}
+.client-quote-div .slogan {
+	margin: 10px 0 0 0;
 }

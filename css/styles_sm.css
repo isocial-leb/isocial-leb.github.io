@@ -13,4 +13,8 @@
 	.NormalDiv2 {
 		max-width: 500px;
 	}
+	.client-logo-div{
+		width: fit-content;
+		margin: auto;
+	}
 }
