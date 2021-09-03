@@ -16,5 +16,8 @@
 	.client-logo-div{
 		width: fit-content;
 		margin: auto;
+	}	
+	.col-xs-6 {
+		width: 46.6%;
 	}
 }
