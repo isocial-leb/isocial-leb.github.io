@@ -228,11 +228,7 @@
 
 	<!-- Script -->
 
-	<script type="text/javascript">
-		setTimeout(function() {
-			$('#splashScreen').fadeOut('fast');
-		}, 4000);
-	</script>
+
 	<script>
 		$(document).ready(myfunction);
 		$(window).on('scroll',myfunction);
@@ -372,6 +368,10 @@
 		$('.full-screen-navbar').toggleClass("dis-block");
 	});
 </script>
-
+<script>
+	$(window).on('load', function () {
+		$('#splashScreen').hide();
+	}) 
+</script>
 </body>
 </html>
