@@ -29,6 +29,13 @@
 </head>
 
 <body>
+	<div class="splashScreen" id="splashScreen">
+		<img class="animate__animated animate__heartBeat animate__infinite	infinite animate__slow" src="img/logo-only.png">
+	</div>
+	<div class="returnTop" onclick="topFunction()">
+		<h1 class="displayCheck top-text animate__animated">Top</h1>
+		<img src="img/arrow-top.png" class="displayCheck top-icon animate__animated">
+	</div>
 
 	<!-- Main Navbar -->
 
@@ -48,6 +55,7 @@
 		
 	</nav>
 	<div class="for-scrolling"></div>
+
 	<!-- Full screen menu -->
 
 	<div class="container full-screen-navbar animate__animated animate__fadeOut">
@@ -186,29 +194,29 @@
 				<div class="topBorder dis-flex"></div>
 				<div class="row quote-1 mySlides">
 					<div class="col-lg-4 client-logo-div">
-						<img src="img/cl-1.png" class="animate__animated animate__flipInX">
+						<img src="img/cl-1.png" class="animate__animated animate__flipInX animate__slow">
 					</div>
 					<div class="col-lg-8 slogan">
-						<h2 class="animate__animated animate__flipInX">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
-						<h4 class="animate__animated animate__flipInX">Mohamad Omar - CEO and Founder of Taliban</h4>
+						<h2 class="animate__animated animate__flipInX animate__slow">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
+						<h4 class="animate__animated animate__flipInX animate__slow">Mohamad Omar - CEO and Founder of Taliban</h4>
 					</div>
 				</div>
 				<div class="row quote-2 mySlides">
 					<div class="col-lg-4 client-logo-div">
-						<img src="img/cl-2.png" class="animate__animated animate__flipInX">
+						<img src="img/cl-2.png" class="animate__animated animate__flipInX animate__slow">
 					</div>
 					<div class="col-lg-8 slogan">
-						<h2 class="animate__animated animate__flipInX">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
-						<h4 class="animate__animated animate__flipInX">Abu Bakr al-Baghdadi - CEO and Founder of Daesh</h4>
+						<h2 class="animate__animated animate__flipInX animate__slow">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
+						<h4 class="animate__animated animate__flipInX animate__slow">Abu Bakr al-Baghdadi - CEO and Founder of Daesh</h4>
 					</div>
 				</div>
 				<div class="row quote-2 mySlides">
 					<div class="col-lg-4 client-logo-div">
-						<img src="img/cl-4.png" class="animate__animated animate__flipInX">
+						<img src="img/cl-4.png" class="animate__animated animate__flipInX animate__slow">
 					</div>
 					<div class="col-lg-8 slogan">
-						<h2 class="animate__animated animate__flipInX">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
-						<h4 class="animate__animated animate__flipInX">Abu Bakr al-Baghdadi - CEO and Founder of Daesh</h4>
+						<h2 class="animate__animated animate__flipInX animate__slow">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
+						<h4 class="animate__animated animate__flipInX animate__slow">Abu Bakr al-Baghdadi - CEO and Founder of Daesh</h4>
 					</div>
 				</div>
 			</div>
@@ -220,6 +228,42 @@
 
 	<!-- Script -->
 
+	<script type="text/javascript">
+		setTimeout(function() {
+			$('#splashScreen').fadeOut('fast');
+		}, 4000);
+	</script>
+	<script>
+		$(document).ready(myfunction);
+		$(window).on('scroll',myfunction);
+
+		function myfunction(){
+			var scroll = $(window).scrollTop();
+			if (scroll == 0) {
+				$('.top-text').addClass('show animate__backInUp').removeClass('none animate__backOutUp');
+				$('.top-icon').addClass('animate__backOutUp').removeClass('animate__backInUp');
+			}else{
+				$('.top-text').addClass('animate__backOutUp').removeClass('none animate__backInUp');
+				$('.top-icon').addClass('show animate__backInUp').removeClass('animate__backOutUp');
+			}
+		};
+		function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!-- 	<script>
+		$(window).scroll(function(){
+			var scroll = $(window).scrollTop();
+			if (scroll == 0) {
+				$('.top-text').addClass('show animate__backInUp').removeClass('none animate__backOutUp');
+				$('.top-icon').addClass('animate__backOutUp').removeClass('animate__backInUp');
+			}else{
+				$('.top-text').addClass('animate__backOutUp').removeClass('none animate__backInUp');
+				$('.top-icon').addClass('show animate__backInUp').removeClass('animate__backOutUp');
+			}
+		})
+	</script> -->
 	<script>
 		var myIndex = 0;
 		carousel();
