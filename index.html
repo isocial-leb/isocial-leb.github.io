@@ -295,69 +295,32 @@
 		});
 	});
 </script>
-
 <script type="text/javascript">
-		// !!!! This code is experimental...don't blame me if your performance tanks.
-
-		const box = document.getElementById("box");
-		const text = document.getElementById("text");
-
-		function resizeBox() {
-			calcTextWidth();
-			calcTextSize();
+	const menuBtn = document.querySelector('.menu-btn');
+	let menuOpen = false;
+	menuBtn.addEventListener('click', () => {
+		if(!menuOpen) {
+			menuBtn.classList.add('open');
+			menuOpen = true;
+		} else {
+			menuBtn.classList.remove('open');
+			menuOpen = false;
 		}
-		resizeBox();
+	});
+</script>
+<script>
+	var slideIndex = 0;
+	showSlides();
 
-		new ResizeObserver(resizeBox).observe(box);
-
-		function calcTextWidth() {
-			const parentContainerWidth = text.parentNode.clientWidth;
-
-			const currentTextWidth = text.scrollWidth;
-			const currentFontStretch = parseInt(window.getComputedStyle(text).fontStretch);
-
-
-			console.log('parent: ' + parentContainerWidth + ' textwidth: ' + currentTextWidth + ' stretch: ' +currentFontStretch);
-			const newValue = Math.min(Math.max(300, (parentContainerWidth / currentTextWidth) * currentFontStretch), 500) ;
-
-			text.style.setProperty('--fontStretch', newValue + '%');
+	function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("blinkable");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
 		}
-
-		function calcTextSize() {
-			const parentContainerWidth = text.parentNode.clientWidth;
-			const currentTextWidth = text.scrollWidth;
-			const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
-			const newValue = Math.min(Math.max(16, (parentContainerWidth / currentTextWidth) * currentFontSize), 500) - 10 ;
-
-			text.style.setProperty('--fontSize', newValue +'px');
-		}
-	</script>
-	<script type="text/javascript">
-		const menuBtn = document.querySelector('.menu-btn');
-		let menuOpen = false;
-		menuBtn.addEventListener('click', () => {
-			if(!menuOpen) {
-				menuBtn.classList.add('open');
-				menuOpen = true;
-			} else {
-				menuBtn.classList.remove('open');
-				menuOpen = false;
-			}
-		});
-	</script>
-	<script>
-		var slideIndex = 0;
-		showSlides();
-
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("blinkable");
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
-			}
-			slideIndex++;
-			if (slideIndex > slides.length) {slideIndex = 1}    
-				slides[slideIndex-1].style.display = "block";  
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+			slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 500); // Change image every 0.5 seconds
 }
 </script>
