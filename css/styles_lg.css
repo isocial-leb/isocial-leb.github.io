@@ -28,15 +28,6 @@
 	.footer {
 		top: initial;
 	}
-	.menu-btn:hover .btn-brg {
-		background: linear-gradient(146deg, #e73c7e, #00d3fb);
-	}
-	.menu-btn:hover .btn-brg::before {
-		background: linear-gradient(146deg, #e73c7e, #00d3fb);
-	}
-	.menu-btn:hover .btn-brg::after {
-		background: linear-gradient(146deg, #e73c7e, #00d3fb);
-	}
 }
 
 
