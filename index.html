@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 
-	<link rel="icon" href="img/isocial-icon.png">
+	<link rel="icon" href="img/logo-only.png">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css"> 
@@ -194,7 +194,7 @@
 				<div class="topBorder dis-flex"></div>
 				<div class="row quote-1 mySlides">
 					<div class="col-lg-4 client-logo-div">
-						<img src="img/cl-1.png" class="animate__animated animate__flipInX animate__slow">
+						<img src="img/cl-1.png" class="animate__animated animate__flipInY animate__slow">
 					</div>
 					<div class="col-lg-8 slogan">
 						<h2 class="animate__animated animate__flipInX animate__slow">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
@@ -203,7 +203,7 @@
 				</div>
 				<div class="row quote-2 mySlides">
 					<div class="col-lg-4 client-logo-div">
-						<img src="img/cl-2.png" class="animate__animated animate__flipInX animate__slow">
+						<img src="img/cl-2.png" class="animate__animated animate__flipInY animate__slow">
 					</div>
 					<div class="col-lg-8 slogan">
 						<h2 class="animate__animated animate__flipInX animate__slow">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
@@ -212,7 +212,7 @@
 				</div>
 				<div class="row quote-2 mySlides">
 					<div class="col-lg-4 client-logo-div">
-						<img src="img/cl-4.png" class="animate__animated animate__flipInX animate__slow">
+						<img src="img/cl-4.png" class="animate__animated animate__flipInY animate__slow">
 					</div>
 					<div class="col-lg-8 slogan">
 						<h2 class="animate__animated animate__flipInX animate__slow">Bacon ipsum dolor amet enim qui veniam in nulla eiusmod ham hock ex dolor sed. Bresaola bacon incididunt fugiat cupidatat. Biltong pork pancetta reprehenderit in dolor. Chicken nisi kielbasa aliquip officia. </h2>
@@ -223,56 +223,104 @@
 		</div>
 	</section>
 	<section class="contactus marg-50" id="contactus">
+		<div class="bg-contact">
+			<h1 class="intouch">Get in touch</h1>
+			<h2 class="intouch2">Want to get in touch? We'd love to hear to hear from you. Here's how you can reach us...</h2>
+			<div class="NormalDiv4">
+				<div class="div-container row">
+					<div class="col-sm-12 col-lg-4">
+						<div class="row talk-container">
+							<div class="col-lg-12">
+								<img src="img/phone.png">
+							</div>
+							<div class="col-lg-12 text">
+								<h1>Talk to us directly</h1>
+							</div>
+							<div class="col-lg-12">
+								<h2>Interested in isocial's program? Just pick up the phone and call us on:</h2>
+							</div>
+							<div class="col-lg-12 cellNum">
+								<a href=""><span>Lebanon: </span><span>+961 71 292 538</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-lg-4">
+						<div class="row talk-container">
+							<div class="col-lg-12">
+								<img src="img/msg.png">
+							</div>
+							<div class="col-lg-12 text">
+								<h1>...or direct message us</h1>
+							</div>
+							<div class="col-lg-12">
+								<h2>via our email</h2>
+							</div>
+							<div class="col-lg-12 cellNum">
+								<a href="mailto:isocial.lebanon@gmail.com?subject=Need%20more%20info">isocial.lebanon@gmail.com</a>
+							</div>
+							<div class="col-lg-12">
+								<h2>or one of our social media account</h2>
+							</div>
+							<div class="col-lg-12">
+								<a href="https://www.instagram.com/isocial.lb/">
+									<img class="glyphicon social-media" onmouseover="this.src='img/insta-gradient.png'" onmouseout="this.src='img/insta.png'" src="img/insta.png">
+								</a>
+								<a href="">
+									<img class="glyphicon social-media" onmouseover="this.src='img/fb-gradient.png'" onmouseout="this.src='img/fb.png'" src="img/fb.png">
+								</a>
+								<a href="">
+									<img class="glyphicon social-media" onmouseover="this.src='img/linkdin-gradient.png'" onmouseout="this.src='img/linkdin.png'" src="img/linkdin.png">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="footer">
+	<img src="img/logo-only.png" alt="isocial">
+	<h1>© 2018 - 2021&nbsp;<span>isocial</span>
+		<span class="ToBeHiddenOnResp">&nbsp;- All rights reserved</span>
+	</h1>
+</section>
 
-	</section>
-
-	<!-- Script -->
+<!-- Script -->
 
 
-	<script>
-		$(document).ready(myfunction);
-		$(window).on('scroll',myfunction);
+<script>
+	$(document).ready(myfunction);
+	$(window).on('scroll',myfunction);
 
-		function myfunction(){
-			var scroll = $(window).scrollTop();
-			if (scroll == 0) {
-				$('.top-text').addClass('show animate__backInUp').removeClass('none animate__backOutUp');
-				$('.top-icon').addClass('animate__backOutUp').removeClass('animate__backInUp');
-			}else{
-				$('.top-text').addClass('animate__backOutUp').removeClass('none animate__backInUp');
-				$('.top-icon').addClass('show animate__backInUp').removeClass('animate__backOutUp');
-			}
-		};
-		function topFunction() {
+	function myfunction(){
+		var scroll = $(window).scrollTop();
+		if (scroll == 0) {
+			$('.top-text').addClass('show animate__backInUp').removeClass('none animate__backOutUp2');
+			$('.top-icon').addClass('animate__backOutUp2').removeClass('animate__backInUp');
+		}else{
+			$('.top-text').addClass('animate__backOutUp2').removeClass('none animate__backInUp');
+			$('.top-icon').addClass('show animate__backInUp').removeClass('animate__backOutUp2');
+		}
+	};
+	function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 </script>
-<!-- 	<script>
-		$(window).scroll(function(){
-			var scroll = $(window).scrollTop();
-			if (scroll == 0) {
-				$('.top-text').addClass('show animate__backInUp').removeClass('none animate__backOutUp');
-				$('.top-icon').addClass('animate__backOutUp').removeClass('animate__backInUp');
-			}else{
-				$('.top-text').addClass('animate__backOutUp').removeClass('none animate__backInUp');
-				$('.top-icon').addClass('show animate__backInUp').removeClass('animate__backOutUp');
-			}
-		})
-	</script> -->
-	<script>
-		var myIndex = 0;
-		carousel();
+<script>
+	var myIndex = 0;
+	carousel();
 
-		function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
-			}
-			myIndex++;
-			if (myIndex > x.length) {myIndex = 1}    
-				x[myIndex-1].style.display = "flex";  
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";;  
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "flex";  
   setTimeout(carousel, 4000); // Change image every 2 seconds
 }
 </script>
