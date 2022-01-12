@@ -959,8 +959,9 @@
 	100% {
 		transform: translateY(50px);
 		opacity: 0;
-		-webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
-		clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+		-webkit-clip-path:polygon(00% 0, 100% 0%, 100% 100%, 0% 100%)
+		clip-path: polygon(00% 0, 100% 0%, 100% 100%, 0% 100%)
+		
 	}
 }
 @keyframes newSplashOut {
