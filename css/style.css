@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
 
 @font-face {
 	font-family: 'Gotham';
@@ -897,4 +897,184 @@
 .animate__backOutUp2 {
 	-webkit-animation-name: backOutUp2;
 	animation-name: backOutUp2
+}
+
+
+
+@keyframes logoOut {
+	0% {
+		transform: translateY(-50%) scale(0.5);
+		opacity: 1;
+	}
+	30% {
+		transform: translateY(0%) scale(1);
+		opacity: 1;
+	}
+	80% {
+		transform: translateY(0%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(150%) scale(0.3);
+		opacity: 0;
+	}
+}
+@keyframes circleOut {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(100);
+	}
+	90% {
+		transform: scale(100);
+	}
+	100%{
+		transform: scale(0);
+		background: #e73c7e;
+		top: -5px;
+		left: -45%;
+	}
+}
+
+@keyframes titleAnimation {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	}
+	20% {
+		transform: translateY(0);
+		opacity: 1;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
+	80% {
+		transform: translateY(0);
+		opacity: 1;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
+	100% {
+		transform: translateY(50px);
+		opacity: 0;
+		-webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+		clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+	}
+}
+@keyframes newSplashOut {
+	0%{
+		transform: scale(1.0);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(0);
+		top: -5px;
+		left: -45%;
+		opacity: 0;
+	}
+}
+.newSplash {
+	animation: newSplashOut 0.1s;
+	animation-delay: 6.5s;
+	animation-fill-mode: forwards;
+
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 6;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+.entryLogo {
+	max-width: 100px;
+	margin: 0 auto;
+	top: calc(50% - 50px);
+	right: calc(50% - 50px);
+	position: fixed;
+	animation: logoOut 3s;
+	animation-fill-mode: forwards;
+}
+.entryLogo img {
+	max-width: inherit;
+}
+.entryColorcircle {
+	animation: circleOut;
+	animation-delay: 2.7s;	
+	animation-duration: 4.5s;
+	animation-fill-mode: both;
+	transition-timing-function: ease-in;
+
+	z-index: 7;
+	top: 90%;
+	right: calc(50% - 25px);
+	max-width: 100px;
+	margin: 0 auto;
+	border-radius: 25px;
+	position: fixed;
+	background: #00d3fb;
+	backdrop-filter: blur(8px);
+	height: 50px;
+	width: 50px;
+}
+@media (min-width: 1010px){
+	.splashSlogan {
+		width: 45% !important;
+	}
+	.splashSlogan h1 span {
+		font-size: 3vw!important;
+	}
+}
+
+.splashSlogan {
+	opacity: 1;
+	z-index: 8;
+	width: 85%;
+	margin: auto;
+	position: fixed;
+	transform-origin: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.splashSlogan h1 {
+	font-size: 75px;
+	text-transform: uppercase;
+}
+.splashSlogan h1 span {
+	animation-name: titleAnimation;
+	animation-delay: 2.7s;
+	animation-timing-function: ease;
+	animation-duration: 3s;
+
+	z-index: 999;
+	color: white;
+	font-family: "Baloo Paaji", cursive;
+	text-align: left;
+	line-height: 1.5em;
+	font-weight: 800;
+	font-size: 6vw;
+	width: 100%;
+	float: left;
+	-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	transform: translateY(-50px);
+	opacity: 0;
+}
+
+.splashSlogan h1 span {
+	animation-delay: 3.3s;
+	-webkit-animation-fill-mode: forwards;
+}
+.splashSlogan h1 span:first-child {
+	animation-delay: 3.4s;
+}
+.splashSlogan h1 span:last-child {
+	animation-delay: 3.2s;
 }
