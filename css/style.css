@@ -1102,5 +1102,6 @@
 	width: 10px;
 	height: 10px;
 	clip-path: circle(40%);
+	-webkit-clip-path: circle(40%);
 	margin-right: 8px;
 }
