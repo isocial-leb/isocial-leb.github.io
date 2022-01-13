@@ -32,6 +32,9 @@
 	.nav-lg-container {
 		display: none !important;
 	}
+	.newClientsection .NormalDiv3{
+		max-width: 99%;
+	}	
 }
 
 /*navbar*/
