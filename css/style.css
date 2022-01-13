@@ -899,12 +899,36 @@
 	-webkit-animation-name: backOutUp2;
 	animation-name: backOutUp2
 }
-
-
+@keyframes transformTocircle {
+	0% {
+		clip-path: circle(100%);
+	}
+	10% {
+		clip-path: circle(3%);
+		transform: translateY(42%);
+	}
+	85% {
+		clip-path: circle(3%);
+		transform: translateY(42%);
+	}
+	90%{
+		opacity: 1;
+	}
+	100% {
+		clip-path: circle(100%);
+		opacity: 0;
+	}
+}
+.splashScreenExtra{
+	animation: transformTocircle;
+	animation-duration: 4s;
+	animation-delay: 2.6s;
+	animation-fill-mode: forwards;
+}
 
 @keyframes logoOut {
 	0% {
-		transform: translateY(-50%) scale(0.5);
+		transform: translateY(0%) scale(1);
 		opacity: 1;
 	}
 	30% {
@@ -975,6 +999,9 @@
 		left: -45%;
 		opacity: 0;
 	}
+}
+.hidden {
+	display: none;
 }
 .newSplash {
 	animation: newSplashOut 0.1s;
@@ -1059,7 +1086,7 @@
 	animation-duration: 3s;
 
 	z-index: 999;
-	color: white;
+	color: red;
 	font-family: "Baloo Paaji", cursive;
 	text-align: left;
 	line-height: 1.5em;
