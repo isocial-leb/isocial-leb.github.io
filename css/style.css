@@ -39,7 +39,9 @@
 
 /*navbar*/
 
-
+html {
+	overflow: hidden;
+}
 .splashScreen img{
 	max-width: 100px;
 }

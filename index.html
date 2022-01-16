@@ -602,9 +602,11 @@
 </script>
 <script>
 	$(window).on('load', function () {
-	var delayInMilliseconds = 8500; //1 second
+	var delayInMilliseconds = 7000; //1 second
+	var x = document.getElementById('html');
 	setTimeout(function() {
 		$('#splashScreen').addClass('hidden');
+		x.style.overflow = 'visible'
 	}, delayInMilliseconds);
 }) 
 </script>	
