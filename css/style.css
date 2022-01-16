@@ -1223,7 +1223,7 @@ p, li {
 .contactBox {
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(220.79deg,rgba(0,133,255,.97) .33%,rgba(147,64,250,.97) 85.46%);
+	background: linear-gradient(146deg, #e73c7ef2, #00d3fbe3);
 	border-radius: 32px;
 	overflow: hidden;
 	max-width: 80%;
@@ -1308,7 +1308,7 @@ p, li {
 	justify-content: center;
 }
 a:hover {
-	color: white; !important;
+	color: white !important;
 }
 .contactContainer .row:nth-of-type(1){
 	display: flex;
