@@ -47,6 +47,7 @@
 	position: fixed;
 	display: flex;
 	z-index: 1000;
+	top: 0;
 	background: linear-gradient(348deg, #e73c7e, #00d3fb);
 	backdrop-filter: blur(8px);
 	width: 100%;
