@@ -1153,9 +1153,6 @@ html {
 	padding-bottom: 0;
 	display: flex;
 }
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-}
 .card-back {
 	position: absolute;
 	width: 100%;
@@ -1177,7 +1174,6 @@ html {
 	position: absolute;
 }
 .client-card img{
-	cursor: pointer;
 	margin: auto;
 	position: relative;
 	max-width: 55%;
@@ -1365,4 +1361,25 @@ a:hover {
 	.flip-card {
 		min-width: 50%;
 	}
+	.intouch {
+		font-size: 43px;
+	}
+}
+.founderP{
+	--fontStretch: 500%;
+	--fontSize: 2em;
+	margin: auto;
+	background: linear-gradient(146deg, #e73c7e, #00d3fb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 0;
+	width: fit-content;
+	font-weight: inherit;
+	text-decoration: none;
+	white-space: nowrap;
+	display: block;
+	text-transform: uppercase;
+	font-family: "Baloo Paaji", cursive;
+	font-size: var(--fontSize);
+	font-stretch: var(--fontStretch);
 }
