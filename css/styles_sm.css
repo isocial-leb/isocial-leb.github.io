@@ -1,0 +1,23 @@
+@media(max-width:992px){
+	.slogan {
+		max-width: 500px;
+		padding: 0;
+		margin: auto;
+	}
+	.center-pics {
+		max-width: 350px;
+	}
+	.hidden-xs{
+		display: none;
+	}
+	.NormalDiv2 {
+		max-width: 500px;
+	}
+	.client-logo-div{
+		width: fit-content;
+		margin: auto;
+	}	
+	.col-xs-6 {
+		width: 46.6%;
+	}
+}
