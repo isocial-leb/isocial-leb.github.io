@@ -1364,6 +1364,9 @@ a:hover {
 	.intouch {
 		font-size: 43px;
 	}
+	.cellNum p{
+		text-align: center;
+	}
 }
 .founderP{
 	--fontStretch: 500%;
